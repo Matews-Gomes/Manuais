@@ -16,5 +16,4 @@ export class VideosComponent implements OnInit {
   videos = [
     {"nome":"App-retaguarda", "src": "https://www.youtube.com/embed/c3syyhz0weY"}
   ]
-
 }

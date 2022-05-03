@@ -18,7 +18,7 @@
       id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" (click)="isCollapsed = !isCollapsed" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="btn btn-secondary dropdown-toggle" (click)="isCollapsed = !isCollapsed" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="fa-solid fa-video"></i>
               Todos os videos
             </a>
@@ -26,50 +26,13 @@
                 <form class="p-2 mb-2 bg-dark border-bottom border-dark">
                   <input type="search" class="form-control form-control-dark" autocomplete="false" placeholder="Pesquisar videos">
                 </form>
-                <div class="scrollspy-videos" data-bs-spy="scroll" data-bs-target="#exatto-pdv" data-off="0">
-                  <li>
-                    <a class="dropdown-item d-flex align-items-center gap-2 py-2">
+                <div class="scrollspy-videos" data-bs-spy="scroll" data-bs-target="#exatto" data-off="0">
+                  <li *ngFor="let video of videos">
+                    <a class="dropdown-item d-flex align-items-center gap-2 py-2 linkvideo" href="#">
                     <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
-                    App-retaguarda
+                    {{video.nome}}
                   </a>
                 </li>
-                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-                    <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
-                    Cadastrar-pessoa
-                  </a></li>
-                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-                    <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
-                    Cartão-presente
-                  </a></li>
-                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-                    <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
-                    Recarga-cartão-presente
-                  </a></li>
-                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-                    <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
-                    Reiniciar-serviços
-                  </a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-                    <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
-                    Exatto PDV
-                  </a></li>
-                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-                    <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
-                    Vendas
-                  </a></li>
-                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-                    <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
-                    Limpar-F10
-                  </a></li>
-                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-                    <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
-                    Cancelar-cupom
-                  </a></li>
-                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
-                    <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
-                    Leitura-X
-                  </a></li>
                   <li><hr class="dropdown-divider"></li>
                 </div>
               </ul>
@@ -79,8 +42,8 @@
     </div>
   </nav>
   <div class="ratio ratio-16x9">
-    <iframe
-      src="https://www.youtube.com/embed/vlDzYIIOYmM"
+    <iframe id="fonteVideo"
+      src='https://www.youtube.com/embed/c3syyhz0weY'
       title="YouTube video"
       allowfullscreen
     ></iframe>
