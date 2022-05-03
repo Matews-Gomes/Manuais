@@ -1,0 +1,88 @@
+<div class="container my-4" id="videos">
+  <h3 class="display-5 text-center">
+    <i class="fa-solid fa-tv"></i>
+    Videos
+  </h3>
+  <p class="lead fs-4 text-center">Todos os videos treinamentos aqui...</p>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <img src="../../assets/ICONE.ico"
+      alt="" width="30" height="30" class="d-inline-block align-text-top mx-2">
+        Avatim
+      </a>
+      <button class="navbar-toggler" (click)="isCollapsed = !isCollapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" [collapse]="isCollapsed" [isAnimated]="true"
+      id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" (click)="isCollapsed = !isCollapsed" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-video"></i>
+              Todos os videos
+            </a>
+              <ul class="dropdown-menu dropdown-menu-dark" [collapse]="isCollapsed" [isAnimated]="true" aria-labelledby="navbarDropdown">
+                <form class="p-2 mb-2 bg-dark border-bottom border-dark">
+                  <input type="search" class="form-control form-control-dark" autocomplete="false" placeholder="Pesquisar videos">
+                </form>
+                <div class="scrollspy-videos" data-bs-spy="scroll" data-bs-target="#exatto-pdv" data-off="0">
+                  <li>
+                    <a class="dropdown-item d-flex align-items-center gap-2 py-2">
+                    <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
+                    App-retaguarda
+                  </a>
+                </li>
+                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                    <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
+                    Cadastrar-pessoa
+                  </a></li>
+                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                    <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
+                    Cartão-presente
+                  </a></li>
+                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                    <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
+                    Recarga-cartão-presente
+                  </a></li>
+                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                    <span class="d-inline-block bg-success rounded-circle" style="width: .5em; height: .5em;"></span>
+                    Reiniciar-serviços
+                  </a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
+                    Exatto PDV
+                  </a></li>
+                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
+                    Vendas
+                  </a></li>
+                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
+                    Limpar-F10
+                  </a></li>
+                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
+                    Cancelar-cupom
+                  </a></li>
+                  <li><a class="dropdown-item d-flex align-items-center gap-2 py-2" href="#">
+                    <span class="d-inline-block bg-primary rounded-circle" style="width: .5em; height: .5em;"></span>
+                    Leitura-X
+                  </a></li>
+                  <li><hr class="dropdown-divider"></li>
+                </div>
+              </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="ratio ratio-16x9">
+    <iframe
+      src="https://www.youtube.com/embed/vlDzYIIOYmM"
+      title="YouTube video"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
