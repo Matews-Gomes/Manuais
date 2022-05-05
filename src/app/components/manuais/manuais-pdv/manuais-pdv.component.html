@@ -1,0 +1,39 @@
+<div class="container my-1">
+  <h3 class="display-5 text-center">
+    <i class="fa-regular fa-file-lines" id="manuais"></i>
+    Manuais - Pdv {{filtroSite}}
+  </h3>
+    <p class="lead fs-4 text-center">Todos os manuais do sistema de vendas exatto...</p>
+    <div class="d-flex">
+      <input class="form-control shadow p-3 my-2 bg-body rounded-pill" type="search"
+      placeholder="Pesquisar" aria-label="Search" [(ngModel)]="filtroSite" >
+      <i class="fa fa-search rounded-pill my-4 mx-2" style="font-size: 38px;"></i>
+    </div>
+    <div class="scrollspy-site" data-bs-spy="scroll" data-bs-target="#manual" data-off="0">
+      <table class="table">
+        <thead>
+          <tr>
+            <th cope="col">#</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let manual of manuais">
+            <th scope="row">
+              <i class="fa-solid fa-file-pdf" style="font-size: 25px;"></i>
+            </th>
+            <td>{{manual.nome}}</td>
+            <td>
+              <a class="btn btn-outline-success" tooltip="Veja agora!" placement="right"
+              href={{manual.arquivo}}
+              target="blank">
+              <i class="fa-solid fa-download"></i>
+              Baixar
+            </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
