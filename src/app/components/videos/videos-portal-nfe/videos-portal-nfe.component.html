@@ -1,0 +1,33 @@
+<div class="container my-1">
+  <h3 class="display-5 text-center">
+    <i class="fa-solid fa-tv"></i>
+    Videos Portal-NFe
+  </h3>
+    <p class="lead fs-4 text-center">Todos os vidoes em um unico lugar...</p>
+    <div class="d-flex">
+      <input class="form-control shadow p-3 my-2 bg-body rounded-pill" type="search"
+      placeholder="Pesquisar" aria-label="Search" (input)="Search($event)" >
+      <i class="fa fa-search rounded-pill my-4 mx-2" style="font-size: 38px;"></i>
+    </div>
+  <div class="my-3 p-3 bg-body rounded shadow-sm scrollspy-site"
+  data-bs-spy="scroll" data-bs-target="#videos" data-off="0">
+    <h6 class="border-bottom pb-2 mb-0">Assita quantas vezes quiser a todos os videos...</h6>
+    <div class="d-flex text-muted pt-3" *ngFor="let video of videosFiltrados">
+      <i class="fa-brands fa-youtube mx-2" style="font-size: 35px;"></i>
+      <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <div class="d-flex justify-content-between">
+          <strong class="text-gray-dark my-auto">{{video.titulo}}</strong>
+            <a class="btn btn-success" href={{video.urlVideo}}
+            target="_blank">
+              <i class="fa-solid fa-video"></i>
+              Assitir
+            </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

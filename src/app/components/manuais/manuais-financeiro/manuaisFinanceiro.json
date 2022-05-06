@@ -1,0 +1,16 @@
+[
+  {
+    "nome": "Emissão de Boletos",
+    "arquivo": "../../../../assets/Financeiro/EMITIR_BOLETOS.pdf"
+  },
+
+  {
+    "nome": "Lançamento Contas a Pagar",
+    "arquivo": "../../../../assets/Financeiro/LanCamento_ContaS_Pagar.pdf"
+  },
+
+  {
+    "nome": "Classificar Despesas de Caixa",
+    "arquivo": "../../../../assets/Financeiro/CLASSIFICAR_DESPESAS.pdf"
+  }
+]
