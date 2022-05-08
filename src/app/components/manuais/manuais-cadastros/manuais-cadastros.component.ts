@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import manuaisCadastroData from './manuaisCadastros.json'
+import manuaisCadastroData from '../../../../assets/Jsons/manuaisCadastros.json'
 
 interface Manual{
   nome: string;

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import linksAvatim from './linksAvatim.json'
-import linksDistribuicao from './linksDistribuicao.json'
+import linksAvatim from '../../../assets/Jsons/linksAvatim.json'
+import linksDistribuicao from '../../../assets/Jsons/linksDistribuicao.json'
 
 interface Links{
   titulo: string;

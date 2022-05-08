@@ -1,6 +1,6 @@
 import { DomSanitizer } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
-import videosGerencia from './videosGerencia.json';
+import videosGerencia from '../../../../assets/Jsons/videosGerencia.json';
 
 interface Videos{
   titulo: string;

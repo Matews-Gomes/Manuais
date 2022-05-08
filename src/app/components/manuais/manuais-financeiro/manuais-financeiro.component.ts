@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import manuaisFinanceiro from './manuaisFinanceiro.json';
+import manuaisFinanceiro from '../../../../assets/Jsons/manuaisFinanceiro.json';
 
 interface Manual{
   nome: string;

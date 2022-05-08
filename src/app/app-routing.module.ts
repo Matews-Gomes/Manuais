@@ -10,8 +10,10 @@ import { ManuaisFinanceiroComponent } from './components/manuais/manuais-finance
 import { VideosPDVComponent } from './components/videos/videos-pdv/videos-pdv.component';
 import { VideosPortalFranquiasComponent } from './components/videos/videos-portal-franquias/videos-portal-franquias.component';
 import { VideosAppRetaguardaComponent } from './components/videos/videos-app-retaguarda/videos-app-retaguarda.component';
+import { ManuaisPDVComponent } from './components/manuais/manuais-pdv/manuais-pdv.component';
 
 const routes: Routes = [
+  {path: 'manuais/pdv', component: ManuaisPDVComponent},
   {path: 'manuais/cadastros', component: ManuaisCadastrosComponent},
   {path: 'manuais/franquias', component: ManuaisFranquiasComponent},
   {path: 'manuais/financeiro', component: ManuaisFinanceiroComponent},

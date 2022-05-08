@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import manuaisFranquiasData from './manuaisFranquias.json'
+import manuaisFranquiasData from '../../../../assets/Jsons/manuaisFranquias.json'
 
 interface Manual{
   nome: string;

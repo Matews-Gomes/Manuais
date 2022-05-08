@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import videosAppRetaguarda from './videosAppRetaguarda.json'
+import videosAppRetaguarda from '../../../../assets/Jsons/videosAppRetaguarda.json'
 
 interface Videos{
   titulo: string;

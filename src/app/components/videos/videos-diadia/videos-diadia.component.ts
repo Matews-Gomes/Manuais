@@ -1,6 +1,6 @@
 import { DomSanitizer } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
-import videosDiaDia from './videosDiaDia.json';
+import videosDiaDia from '../../../../assets/Jsons/videosDiaDia.json';
 
 interface Videos{
   titulo: string;

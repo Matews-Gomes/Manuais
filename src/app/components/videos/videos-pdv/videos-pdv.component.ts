@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import videosPDV from './videosPDV.json'
+import videosPDV from '../../../../assets/Jsons/videosPDV.json'
 
 interface Videos{
   titulo: string;

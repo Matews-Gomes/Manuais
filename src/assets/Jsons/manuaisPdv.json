@@ -1,0 +1,20 @@
+[
+  {"nome": "Cadastro de Clientes",
+    "arquivo": "../../assets/PDV/CADASTROCLIENTES.pdf"
+  },
+
+  {
+    "nome": "Espelho Bematool",
+    "arquivo": "../../assets/PDV/ESPELHO_BEMATOOL3.jpg"
+  },
+
+  {
+    "nome": "Solução NFCe",
+    "arquivo": "../../assets/PDV/NFCE_XML.pdf"
+  },
+
+  {
+    "nome": "Solução SAT",
+    "arquivo": "../../assets/PDV/sat_xml.pdf"
+  }
+]
