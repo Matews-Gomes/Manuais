@@ -1,3 +1,4 @@
+import { DomSanitizer } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 import videosDiaDia from './videosDiaDia.json';
 
@@ -25,7 +26,7 @@ export class VideosDiadiaComponent implements OnInit {
     })
   }
 
-  constructor() { }
+  constructor(public _sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
   }

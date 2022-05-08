@@ -16,12 +16,9 @@
       <i class="fa-brands fa-youtube mx-2" style="font-size: 35px;"></i>
       <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
         <div class="d-flex justify-content-between">
-          <strong class="text-gray-dark my-auto">{{video.titulo}}</strong>
-            <a class="btn btn-success" href={{video.urlVideo}}
-            target="_blank">
-              <i class="fa-solid fa-video"></i>
-              Assitir
-            </a>
+          <strong class="text-gray-dark mt-2">{{video.titulo}}</strong>
+          <iframe class="shadow p-1 bg-dark" [src]="_sanitizer.bypassSecurityTrustResourceUrl(video.urlVideo)"
+          frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </div>

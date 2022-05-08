@@ -7,15 +7,28 @@
     <div class="row align-items-md-stretch">
       <div class="col-md-6">
         <div class="h-100 p-5 text-white bg-dark rounded-3">
-          <h2>Links Avatim</h2>
-          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+          <h2 class="text-white">Franquias Avatim</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-dark text-white" *ngFor="let link of linksFiltrados">
+              <a class="link-light" [href]="_sanitizer.bypassSecurityTrustResourceUrl(link.urlLink)" target="_blank">
+                <i class="fa-solid fa-link" style="font-size: 20px;"></i>
+                {{link.titulo}}
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Links Utéis</h2>
-          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-          <button class="btn btn-outline-secondary" type="button">Example button</button>
+        <div class="h-100 p-5 bg-success border rounded-3">
+          <h2 class="text-white">Distribuição Avatim</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-success text-dark" *ngFor="let link of linksDistFiltrados">
+              <a class="link-dark" [href]="_sanitizer.bypassSecurityTrustResourceUrl(link.urlLinkDist)" target="_blank">
+                <i class="fa-solid fa-link" style="font-size: 20px;"></i>
+                {{link.tituloDist}}
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

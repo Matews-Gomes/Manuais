@@ -1,0 +1,31 @@
+[
+  {
+    "titulo": "chamados.avatim.com.br",
+    "urlLink": "http://chamados.avatim.com.br/logon?ReturnUrl=%2f"
+  },
+
+  {
+    "titulo": "restrito.avatim.com.br",
+    "urlLink": "http://restrito.avatim.com.br/Account/Login?ReturnUrl=%2f"
+  },
+
+  {
+    "titulo": "compras.avatim.com.br",
+    "urlLink": "http://compras.avatim.com.br/"
+  },
+
+  {
+    "titulo": "franquiasrevenda.avatim.com.br",
+    "urlLink": "http://franquiasrevenda.avatim.com.br/Account/Login?ReturnUrl=%2f"
+  },
+
+  {
+    "titulo": "portalfranquias.avatim.com.br",
+    "urlLink": "http://portalfranquias.avatim.com.br/"
+  },
+
+  {
+    "titulo": "portalnfe.avatim.com.br/",
+    "urlLink": "http://portalnfe.avatim.com.br/"
+  }
+]

@@ -1,3 +1,4 @@
+import { DomSanitizer } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 import videosGerencia from './videosGerencia.json';
 
@@ -24,7 +25,7 @@ export class VideosGerenciaComponent implements OnInit {
       return videos.titulo.toLocaleLowerCase().includes(value)
     })
   }
-  constructor() { }
+  constructor(public _sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
   }

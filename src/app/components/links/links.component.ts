@@ -1,4 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import linksAvatim from './linksAvatim.json'
+import linksDistribuicao from './linksDistribuicao.json'
+
+interface Links{
+  titulo: string;
+  urlLink: string;
+}
+
+interface LinksDist{
+  tituloDist: string;
+  urlLinkDist: string;
+}
 
 @Component({
   selector: 'app-links',
@@ -7,7 +20,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LinksComponent implements OnInit {
 
-  constructor() { }
+  public links: Links[] = linksAvatim;
+  public linksFiltrados: Links[] = linksAvatim;
+
+  public linksDist: LinksDist[] = linksDistribuicao;
+  public linksDistFiltrados: LinksDist[] = linksDistribuicao;
+
+  constructor(public _sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
   }

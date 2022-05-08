@@ -17,6 +17,9 @@ import { VideosPortalNfeComponent } from './components/videos/videos-portal-nfe/
 import { VideosGerenciaComponent } from './components/videos/videos-gerencia/videos-gerencia.component';
 import { VideosDiadiaComponent } from './components/videos/videos-diadia/videos-diadia.component';
 import { ManuaisFinanceiroComponent } from './components/manuais/manuais-financeiro/manuais-financeiro.component';
+import { VideosPDVComponent } from './components/videos/videos-pdv/videos-pdv.component';
+import { VideosPortalFranquiasComponent } from './components/videos/videos-portal-franquias/videos-portal-franquias.component';
+import { VideosAppRetaguardaComponent } from './components/videos/videos-app-retaguarda/videos-app-retaguarda.component';
 
 
 @NgModule({
@@ -32,6 +35,9 @@ import { ManuaisFinanceiroComponent } from './components/manuais/manuais-finance
     VideosGerenciaComponent,
     VideosDiadiaComponent,
     ManuaisFinanceiroComponent,
+    VideosPDVComponent,
+    VideosPortalFranquiasComponent,
+    VideosAppRetaguardaComponent,
   ],
   imports: [
     FormsModule,

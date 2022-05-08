@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import videosPortalNFe from './videosPortalNFe.json'
+import videosAppRetaguarda from './videosAppRetaguarda.json'
 
 interface Videos{
   titulo: string;
@@ -9,14 +9,14 @@ interface Videos{
 }
 
 @Component({
-  selector: 'app-videos-portal-nfe',
-  templateUrl: './videos-portal-nfe.component.html',
-  styleUrls: ['./videos-portal-nfe.component.scss']
+  selector: 'app-videos-app-retaguarda',
+  templateUrl: './videos-app-retaguarda.component.html',
+  styleUrls: ['./videos-app-retaguarda.component.scss']
 })
-export class VideosPortalNfeComponent implements OnInit {
+export class VideosAppRetaguardaComponent implements OnInit {
 
-  public videos: Videos[] = videosPortalNFe;
-  public videosFiltrados: Videos[] = videosPortalNFe;
+  public videos: Videos[] = videosAppRetaguarda;
+  public videosFiltrados: Videos[] = videosAppRetaguarda;
 
   Search(e: Event): void{
     const target = e.target as HTMLInputElement
@@ -25,8 +25,8 @@ export class VideosPortalNfeComponent implements OnInit {
       return videos.titulo.toLocaleLowerCase().includes(value)
     })
   }
-
   constructor(public _sanitizer: DomSanitizer) { }
+
 
   ngOnInit(): void {
   }
