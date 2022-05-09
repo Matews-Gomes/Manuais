@@ -20,9 +20,10 @@ export class VideosDiadiaComponent implements OnInit {
 
   Search(e: Event): void{
     const target = e.target as HTMLInputElement
-    const value = target.value
     this.videosFiltrados = this.videos.filter((videos: any) => {
-      return videos.titulo.toLocaleLowerCase().includes(value)
+      if (target.value == undefined)
+      return true;
+      return videos.titulo.toLowerCase().indexOf(target.value.toLowerCase()) !== -1;
     })
   }
 

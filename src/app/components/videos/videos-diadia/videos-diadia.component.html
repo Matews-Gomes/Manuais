@@ -1,7 +1,7 @@
 <div class="container my-1">
   <h3 class="display-5 text-center">
-    <i class="fa-solid fa-tv"></i>
-    Videos do Dia a Dia
+    <i class="fa-solid fa-tv d-none d-md-inline"></i>
+    Utilidades
   </h3>
     <p class="lead fs-4 text-center">Todos os vidoes em um unico lugar...</p>
     <div class="d-flex">
@@ -9,20 +9,24 @@
       placeholder="Pesquisar" aria-label="Search" (input)="Search($event)" >
       <i class="fa fa-search rounded-pill my-4 mx-2" style="font-size: 38px;"></i>
     </div>
-  <div class="my-3 p-3 bg-body rounded shadow-sm scrollspy-site"
-  data-bs-spy="scroll" data-bs-target="#videos" data-off="0">
-    <h6 class="border-bottom pb-2 mb-0">Assita quantas vezes quiser a todos os videos...</h6>
-    <div class="d-flex text-muted pt-3" *ngFor="let video of videosFiltrados">
-      <i class="fa-brands fa-youtube mx-2" style="font-size: 35px;"></i>
-      <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
-        <div class="d-flex justify-content-between">
-          <strong class="text-gray-dark mt-2">{{video.titulo}}</strong>
-          <iframe class="shadow p-1 bg-dark" [src]="_sanitizer.bypassSecurityTrustResourceUrl(video.urlVideo)"
-          frameborder="0" allowfullscreen></iframe>
-        </div>
+    <div class="row align-items-md-stretch scrollspy-site">
+      <div class="col-lg-4 col-md-4 col-sm-6 my-4" *ngFor="let video of videosFiltrados">
+          <strong class="text-dark mt-4">
+            <i class="fa-brands fa-youtube mx-2 my-4" style="font-size: 30px;"></i>
+            {{video.titulo}}
+          </strong>
+          <p class="lead mx-2">{{video.descricao}}</p>
+          <div class="box">
+            <iframe class="shadow p-1 bg-dark"
+              [src]="_sanitizer.bypassSecurityTrustResourceUrl(video.urlVideo)"
+                frameborder="0"
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen
+            ></iframe>
+          </div>
       </div>
     </div>
-  </div>
 </div>
 
 
