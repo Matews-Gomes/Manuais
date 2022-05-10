@@ -1,39 +1,39 @@
-<div class="container my-1">
-  <h3 class="display-5 text-center">
-    <i class="fa-regular fa-file-lines" id="manuais"></i>
-    Portal Franquias
-  </h3>
-    <p class="lead fs-4 text-center">Todos os manuais em um unico lugar...</p>
-    <div class="d-flex">
-      <input class="form-control shadow p-3 my-2 bg-body rounded-pill" type="search"
-      placeholder="Pesquisar" aria-label="Search" (input)="Search($event)" >
-      <i class="fa fa-search rounded-pill my-4 mx-2" style="font-size: 38px;"></i>
-    </div>
-    <div class="scrollspy-site" data-bs-spy="scroll" data-bs-target="#manual" data-off="0">
+<div class="jumbotron jumbotron-fluid mt-4 pt-4">
+  <div class="container text-center">
+    <h1 class="display-4">
+      <i class="fa-regular fa-file-lines"></i>
+      Portal-Franquias
+    </h1>
+    <p class="lead">Todos os manuais em um único lugar...</p>
+    <input type="text" class="form-control rounded-pill my-4"
+    placeholder="Pesquisar vÍdeo" (input)="Search($event)">
+    <hr class="my-4">
+    <div class="scrollspy-site">
       <table class="table">
-        <thead>
+        <thead class="thead-dark">
           <tr>
-            <th cope="col">#</th>
+            <th scope="col">Arquivo</th>
             <th scope="col">Titulo</th>
-            <th scope="col">Ações</th>
+            <th scope="col">Visualizar</th>
           </tr>
         </thead>
         <tbody>
-          <tr  *ngFor="let manual of manuaisFiltrados">
+          <tr *ngFor="let manual of manuaisFiltrados">
             <th scope="row">
-              <i class="fa-solid fa-file-pdf" style="font-size: 35px;"></i>
+              <i class="fa-solid fa-file-pdf mt-2" style="font-size: 32px;"></i>
             </th>
-            <td>{{manual.nome}}</td>
-            <td>
-              <a class="btn btn-outline-success"
+            <td class="mt-2">{{manual.nome}}</td>
+            <td><a class="btn btn-secondary"
               href={{manual.arquivo}}
               target="blank">
               <i class="fa-solid fa-download"></i>
               Baixar
             </a>
-            </td>
+          </td>
           </tr>
         </tbody>
       </table>
     </div>
+  </div>
 </div>
+

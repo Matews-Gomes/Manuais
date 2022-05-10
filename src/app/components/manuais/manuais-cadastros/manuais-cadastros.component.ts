@@ -18,9 +18,10 @@ export class ManuaisCadastrosComponent implements OnInit {
 
   Search(e: Event): void{
     const target = e.target as HTMLInputElement
-    const value = target.value
     this.manuaisFiltrados = this.manuais.filter((manuais: any) => {
-      return manuais.nome.toLocaleLowerCase().includes(value)
+      if (target.value == undefined)
+      return true;
+      return manuais.nome.toLowerCase().indexOf(target.value.toLowerCase()) !== -1;
     })
   }
 
