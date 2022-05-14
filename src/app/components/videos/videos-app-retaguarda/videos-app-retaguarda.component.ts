@@ -1,12 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import videosAppRetaguarda from '../../../../assets/Jsons/videosAppRetaguarda.json'
-
-interface Videos{
-  titulo: string;
-  urlVideo: string;
-  descricao: string;
-}
+import { ToastrService } from 'ngx-toastr';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { Videos } from 'src/app/models/videos.model';
+import { VideosService } from 'src/app/service/videos.service';
 
 @Component({
   selector: 'app-videos-app-retaguarda',
@@ -15,22 +12,50 @@ interface Videos{
 })
 export class VideosAppRetaguardaComponent implements OnInit {
 
-  public videos: Videos[] = videosAppRetaguarda;
-  public videosFiltrados: Videos[] = videosAppRetaguarda;
+  public videos: Videos[] = [];
+  public videosFiltrados: Videos[] = [];
+  private _filtroLista: string = '';
 
-  Search(e: Event): void{
-    const target = e.target as HTMLInputElement
-    this.videosFiltrados = this.videos.filter((videos: any) => {
-      if (target.value == undefined)
-      return true;
-      return videos.titulo.toLowerCase().indexOf(target.value.toLowerCase()) !== -1;
-    })
+  public get filtroLista(): string{
+    return this._filtroLista;
   }
 
-  constructor(public _sanitizer: DomSanitizer) { }
+  video!: Videos[];
 
-
-  ngOnInit(): void {
+  public set filtroLista(value: string){
+    this._filtroLista = value;
+    this.videosFiltrados = this.filtroLista ? this.Search(this.filtroLista) : this.videos;
   }
+
+  public Search(filtrarPor: string): Videos[] {
+    filtrarPor = filtrarPor.toLocaleLowerCase();
+    return this.videosFiltrados.filter(
+      (video: {titulo: string;}) => video.titulo.toLocaleLowerCase().indexOf(filtrarPor) !== -1)
+  }
+
+  constructor(
+    public _sanitizer: DomSanitizer,
+    private _videosService: VideosService,
+    private spinner: NgxSpinnerService,
+    private toastr: ToastrService
+    ) { }
+
+    ngOnInit(): void {
+      this.spinner.show();
+      this.getVideos();
+    }
+    public getVideos(): void{
+      this._videosService.getVideosAppRet().subscribe({
+        next: (_videos: Videos[])=>{
+          this.videos = _videos;
+          this.videosFiltrados = this.videos
+        },
+        error: (err: any)=>{
+          this.spinner.hide()
+          this.toastr.error('Nenhum video encontrado!', 'Error 404');
+        },
+        complete: ()=> this.spinner.hide()
+      });
+    }
 
 }

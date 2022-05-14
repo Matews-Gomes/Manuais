@@ -1,31 +1,34 @@
-import { ManuaisCadastrosComponent } from './components/manuais/manuais-cadastros/manuais-cadastros.component';
-import { ManuaisFranquiasComponent } from './components/manuais/manuais-franquias/manuais-franquias.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LinksComponent } from './components/links/links.component';
-import { VideosPortalNfeComponent } from './components/videos/videos-portal-nfe/videos-portal-nfe.component';
-import { VideosGerenciaComponent } from './components/videos/videos-gerencia/videos-gerencia.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { LinksComponent } from './components/pages/links/links.component';
+import { ManuaisCadastrosComponent } from './components/pages/manuais-cadastros/manuais-cadastros.component';
+import { ManuaisFinanceiroComponent } from './components/pages/manuais-financeiro/manuais-financeiro.component';
+import { ManuaisFranquiasComponent } from './components/pages/manuais-franquias/manuais-franquias.component';
+import { ManuaisPdvComponent } from './components/pages/manuais-pdv/manuais-pdv.component';
+import { VideosAppRetaguardaComponent } from './components/videos/videos-app-retaguarda/videos-app-retaguarda.component';
 import { VideosDiadiaComponent } from './components/videos/videos-diadia/videos-diadia.component';
-import { ManuaisFinanceiroComponent } from './components/manuais/manuais-financeiro/manuais-financeiro.component';
+import { VideosGerenciaComponent } from './components/videos/videos-gerencia/videos-gerencia.component';
 import { VideosPDVComponent } from './components/videos/videos-pdv/videos-pdv.component';
 import { VideosPortalFranquiasComponent } from './components/videos/videos-portal-franquias/videos-portal-franquias.component';
-import { VideosAppRetaguardaComponent } from './components/videos/videos-app-retaguarda/videos-app-retaguarda.component';
-import { ManuaisPDVComponent } from './components/manuais/manuais-pdv/manuais-pdv.component';
+import { VideosPortalNfeComponent } from './components/videos/videos-portal-nfe/videos-portal-nfe.component';
+
 
 const routes: Routes = [
-  {path: 'manuais/pdv', component: ManuaisPDVComponent},
-  {path: 'manuais/cadastros', component: ManuaisCadastrosComponent},
-  {path: 'manuais/franquias', component: ManuaisFranquiasComponent},
-  {path: 'manuais/financeiro', component: ManuaisFinanceiroComponent},
-  {path: 'videos/portalnfe', component: VideosPortalNfeComponent},
-  {path: 'videos/portalfranquias', component: VideosPortalFranquiasComponent},
-  {path: 'videos/appretaguarda', component: VideosAppRetaguardaComponent},
-  {path: 'videos/gerencia', component: VideosGerenciaComponent},
-  {path: 'videos/pdv', component: VideosPDVComponent},
-  {path: 'videos/utilitarios', component: VideosDiadiaComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'pdv', component: ManuaisPdvComponent},
+  {path: 'cadastros', component: ManuaisCadastrosComponent},
+  {path: 'financeiro', component: ManuaisFinanceiroComponent},
+  {path: 'franquias', component: ManuaisFranquiasComponent},
   {path: 'links', component: LinksComponent},
-  {path: '', redirectTo: 'manuais/cadastros', pathMatch: 'full'},
-  {path: '**', redirectTo: 'manuais/cadastros', pathMatch: 'full'},
+  {path: 'videos/pdv', component: VideosPDVComponent},
+  {path: 'videos/gerencia', component: VideosGerenciaComponent},
+  {path: 'videos/utilitarios', component: VideosDiadiaComponent},
+  {path: 'videos/appretaguarda', component: VideosAppRetaguardaComponent},
+  {path: 'videos/portalfranquias', component: VideosPortalFranquiasComponent},
+  {path: 'videos/portalnfe', component: VideosPortalNfeComponent},
+  {path: '', redirectTo: 'home', pathMatch: 'full' },
+  {path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({

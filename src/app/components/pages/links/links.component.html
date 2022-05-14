@@ -1,0 +1,40 @@
+  <div class="container text-center pt-5 pb-3">
+    <h1 class="display-4">
+      <i class="fa-solid fa-link"></i>
+      Links Úteis
+    </h1>
+    <p class="lead">Todos os links de utilidade aqui...</p>
+    <hr class="my-4">
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2>
+            Franquias
+          </h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-dark text-white" *ngFor="let link of linksFiltrados">
+              <a class="link-light" [href]="_sanitizer.bypassSecurityTrustResourceUrl(link.urlLink)" target="_blank">
+                {{link.titulo}}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Distribuição</h2>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-light" *ngFor="let link of linksDistFiltrados">
+              <a class="link-dark"
+                [href]="_sanitizer.bypassSecurityTrustResourceUrl(link.urlLinkDist)" target="_blank">
+                {{link.tituloDist}}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+

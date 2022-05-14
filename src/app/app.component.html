@@ -3,16 +3,16 @@
 </header>
     <main>
   <div class="jumbotron mt-4 pt-4 text-center">
-    <h1 class="display-4 pt-5 pb-3">
-      <i class="fa-solid fa-book"></i>
-      Manuais Avatim
-    </h1>
-    <hr class="my-4">
-    <p class="lead">Portal de manuais para auto ajuda,
-      e videos treinamentos para auxiliar na produtividade...</p>
     <router-outlet></router-outlet>
     <app-footer></app-footer>
   </div>
+</main>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">Carregando...</p>
+</ngx-spinner>
 
 
 
